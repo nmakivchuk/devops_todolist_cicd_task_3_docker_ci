@@ -10,7 +10,7 @@ on:
 
 env:
   PythonVersion: 3.8
-  DockerImageName: kube2py
+  DockerImageName: todoapp
 
 jobs:
   python-ci:
@@ -80,5 +80,5 @@ jobs:
           context: ./src
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.DockerImageName }}:${{ github.sha }}
-          
+
 
